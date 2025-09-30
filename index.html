@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Satisfação</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="pesquisa-container">
+    <h2>Pesquisa de Satisfação</h2>
+    <form id="pesquisaForm">
+      <div>
+        <label for="servico">Qual destes serviços você utilizou?</label>
+        <select name="servico" id="servico" required>
+          <option value="">Selecione</option>
+          <option>Acesso à Informação</option>
+          <option>Serviços Administrativos</option>
+          <option>Atendimento ao Cidadão</option>
+          <option>Ouvidoria</option>
+          <option>Outros</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="atendimento">Como você avalia o atendimento recebido?</label>
+        <select name="atendimento" id="atendimento" required>
+          <option value="">Selecione</option>
+          <option value="1">1 - Péssimo</option>
+          <option value="2">2 - Ruim</option>
+          <option value="3">3 - Regular</option>
+          <option value="4">4 - Bom</option>
+          <option value="5">5 - Ótimo</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="prazo">O serviço foi realizado no prazo esperado?</label>
+        <select name="prazo" id="prazo" required>
+          <option value="">Selecione</option>
+          <option value="1">1 - Não</option>
+          <option value="2">2 - Mais ou menos</option>
+          <option value="3">3 - Sim</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="qualidade">Como você avalia a qualidade do serviço?</label>
+        <select name="qualidade" id="qualidade" required>
+          <option value="">Selecione</option>
+          <option value="1">1 - Péssima</option>
+          <option value="2">2 - Ruim</option>
+          <option value="3">3 - Regular</option>
+          <option value="4">4 - Boa</option>
+          <option value="5">5 - Excelente</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="nota">Nota geral do serviço (1 a 5):</label>
+        <select name="nota" id="nota" required>
+          <option value="">Selecione</option>
+          <option value="1">1 - Péssimo</option>
+          <option value="2">2 - Ruim</option>
+          <option value="3">3 - Regular</option>
+          <option value="4">4 - Bom</option>
+          <option value="5">5 - Ótimo</option>
+        </select>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="graficos-container">
+      <div>
+        <h3>Nota Média</h3>
+        <canvas id="graficoMedia"></canvas>
+      </div>
+
+      <div>
+        <h3>Quantidade por Nota</h3>
+        <canvas id="graficoQuantidade"></canvas>
+      </div>
+
+      <div style="grid-column: span 2;">
+        <h3>Distribuição Percentual</h3>
+        <canvas id="graficoPercentual"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.pesquisa-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pesquisa-container h2,
+.pesquisa-container h3 {
+  text-align: center;
+  color: #333;
+}
+
+.pesquisa-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pesquisa-container label {
+  font-weight: bold;
+  color: #444;
+}
+
+.pesquisa-container select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.pesquisa-container button {
+  align-self: center;
+  padding: 12px 30px;
+  background-color: #0073e6;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pesquisa-container button:hover {
+  background-color: #005bb5;
+}
+
+.graficos-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .graficos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
